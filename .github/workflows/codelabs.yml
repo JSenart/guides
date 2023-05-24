@@ -1,0 +1,25 @@
+name: Setup codelab from Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+
+    - name: Install claat
+      run: go get github.com/googlecodelabs/tools/claat@latest
+
+    - name: Export with claat
+      run: claat export 1y97TRFeCeRPqdzGtKz2FaZa7MPtVhpZRZCT6htl0GCo
