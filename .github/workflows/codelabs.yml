@@ -23,7 +23,7 @@ jobs:
 
     - name: Export with claat
       run: |
-        claat export ${{ secrets.SHEET_ID }}
+        claat export 1y97TRFeCeRPqdzGtKz2FaZa7MPtVhpZRZCT6htl0GCo
         git config --global user.name "JSenart"
         git config --global user.email "jose.senart@gmail.com"
         git add .
